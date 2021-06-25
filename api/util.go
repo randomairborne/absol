@@ -12,13 +12,11 @@ func GetGuild(ds *discordgo.Session, guildId string) *discordgo.Guild {
 		g, err = ds.Guild(guildId)
 		if err != nil {
 			logger.Err().Printf("unable to fetch Guild for Message, %s", err)
-			return nil
 		} else {
 			// Attempt to add this channel into our State
 			err = ds.State.GuildAdd(g)
 			if err != nil {
 				logger.Err().Printf("error updating Guild with Channel, %s", err)
-				return nil
 			}
 		}
 	}
@@ -33,13 +31,11 @@ func GetChannel(ds *discordgo.Session, channelId string) *discordgo.Channel {
 		c, err = ds.Channel(channelId)
 		if err != nil {
 			logger.Err().Printf("unable to fetch Channel for Message, %s", err)
-			return nil
 		} else {
 			// Attempt to add this channel into our State
 			err = ds.State.ChannelAdd(c)
 			if err != nil {
 				logger.Err().Printf("error updating State with Channel, %s", err)
-				return nil
 			}
 		}
 	}
