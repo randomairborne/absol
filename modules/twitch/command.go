@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 	"github.com/bwmarrin/discordgo"
-	"github.com/lordralex/absol/api/logger"
+	"github.com/randomairborne/absol/api/logger"
 	"github.com/spf13/viper"
 	"golang.org/x/oauth2/clientcredentials"
 	"golang.org/x/oauth2/twitch"

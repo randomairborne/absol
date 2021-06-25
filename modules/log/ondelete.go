@@ -3,9 +3,9 @@ package log
 import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
-	"github.com/lordralex/absol/api"
-	"github.com/lordralex/absol/api/database"
-	"github.com/lordralex/absol/api/logger"
+	"github.com/randomairborne/absol/api"
+	"github.com/randomairborne/absol/api/database"
+	"github.com/randomairborne/absol/api/logger"
 )
 
 func OnMessageDelete(ds *discordgo.Session, mc *discordgo.MessageDelete) {

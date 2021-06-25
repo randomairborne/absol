@@ -2,7 +2,7 @@ package main
 
 import (
 	"github.com/bwmarrin/discordgo"
-	"github.com/lordralex/absol/api"
+	"github.com/randomairborne/absol/api"
 	"github.com/spf13/viper"
 	"strings"
 )

@@ -3,9 +3,9 @@ package hjt
 import (
 	"github.com/bwmarrin/discordgo"
 	"github.com/jinzhu/gorm"
-	"github.com/lordralex/absol/api"
-	"github.com/lordralex/absol/api/database"
-	"github.com/lordralex/absol/api/logger"
+	"github.com/randomairborne/absol/api"
+	"github.com/randomairborne/absol/api/database"
+	"github.com/randomairborne/absol/api/logger"
 	"io/ioutil"
 	"net/http"
 	"regexp"
@@ -53,7 +53,7 @@ func RunCommand(ds *discordgo.Session, mc *discordgo.MessageCreate, cmd string, 
 	for _, v := range values {
 		matches, err := regexp.Match(v.MatchCriteria, content)
 		if err != nil {
-			_, _ = ds.ChannelMessageSend(mc.ChannelID, v.Name + " has a bad regex statement: " + err.Error())
+			_, _ = ds.ChannelMessageSend(mc.ChannelID, v.Name+" has a bad regex statement: "+err.Error())
 			return
 		}
 		if matches {
@@ -100,12 +100,12 @@ func readFromUrl(url string) ([]byte, error) {
 }
 
 type HJT struct {
-	Id uint
-	Name string
+	Id            uint
+	Name          string
 	MatchCriteria string
-	Description string
-	Category string
-	Severity Severity
+	Description   string
+	Category      string
+	Severity      Severity
 	SeverityEmoji string `gorm:"-"`
 }
 

@@ -7,8 +7,8 @@ import (
 	"errors"
 	"fmt"
 	"github.com/bwmarrin/discordgo"
-	"github.com/lordralex/absol/api/database"
-	"github.com/lordralex/absol/api/logger"
+	"github.com/randomairborne/absol/api/database"
+	"github.com/randomairborne/absol/api/logger"
 	"github.com/spf13/viper"
 	"io/ioutil"
 	"net/http"
@@ -25,7 +25,7 @@ type site struct {
 	Channels     string
 	AlertServer  []string `gorm:"-"`
 	Servers      string
-	Cookie       string   `gorm:"column:cookie_cobaltsession"`
+	Cookie       string `gorm:"column:cookie_cobaltsession"`
 	Domain       string
 	MaxErrors    int
 	Period       int

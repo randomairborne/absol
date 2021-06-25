@@ -4,9 +4,9 @@ import (
 	"fmt"
 	"github.com/bwmarrin/discordgo"
 	"github.com/jinzhu/gorm"
-	"github.com/lordralex/absol/api"
-	"github.com/lordralex/absol/api/database"
-	"github.com/lordralex/absol/api/logger"
+	"github.com/randomairborne/absol/api"
+	"github.com/randomairborne/absol/api/database"
+	"github.com/randomairborne/absol/api/logger"
 	"github.com/spf13/viper"
 	"strings"
 	"time"
@@ -114,7 +114,7 @@ func RunCommand(ds *discordgo.Session, mc *discordgo.MessageCreate, cmd string, 
 	}
 
 	header := ""
-	if len(mc.Message.Mentions) > 0 || mc.MessageReference != nil  {
+	if len(mc.Message.Mentions) > 0 || mc.MessageReference != nil {
 		//the golang set
 		mentions := make(map[string]bool, 0)
 

@@ -2,14 +2,14 @@ package main
 
 import (
 	"github.com/bwmarrin/discordgo"
-	"github.com/lordralex/absol/api"
-	"github.com/lordralex/absol/api/logger"
-	"github.com/lordralex/absol/modules/alert"
-	"github.com/lordralex/absol/modules/cleaner"
-	"github.com/lordralex/absol/modules/factoids"
-	"github.com/lordralex/absol/modules/hjt"
-	"github.com/lordralex/absol/modules/log"
-	"github.com/lordralex/absol/modules/twitch"
+	"github.com/randomairborne/absol/api"
+	"github.com/randomairborne/absol/api/logger"
+	"github.com/randomairborne/absol/modules/alert"
+	"github.com/randomairborne/absol/modules/cleaner"
+	"github.com/randomairborne/absol/modules/factoids"
+	"github.com/randomairborne/absol/modules/hjt"
+	"github.com/randomairborne/absol/modules/log"
+	"github.com/randomairborne/absol/modules/twitch"
 	"strings"
 )
 

@@ -2,8 +2,8 @@ package cleaner
 
 import (
 	"github.com/bwmarrin/discordgo"
-	"github.com/lordralex/absol/api"
-	"github.com/lordralex/absol/api/logger"
+	"github.com/randomairborne/absol/api"
+	"github.com/randomairborne/absol/api/logger"
 	"github.com/spf13/viper"
 	"strings"
 	"time"
@@ -24,7 +24,8 @@ func (c *Module) Load(d *discordgo.Session) {
 			case <-timer.C:
 				{
 					runTick(ds)
-				}}
+				}
+			}
 		}
 	}(d)
 }

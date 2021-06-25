@@ -2,7 +2,7 @@ package api
 
 import (
 	"github.com/bwmarrin/discordgo"
-	"github.com/lordralex/absol/api/logger"
+	"github.com/randomairborne/absol/api/logger"
 )
 
 func GetGuild(ds *discordgo.Session, guildId string) *discordgo.Guild {
