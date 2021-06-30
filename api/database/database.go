@@ -38,7 +38,7 @@ func load() (db *gorm.DB, err error) {
 	if connString == "" {
 		connString = "discord:discord@/discord"
 	}
-
+	connString = "absol:Password@/absol"
 	db, err = gorm.Open("mysql", connString)
 	if db != nil {
 		db.LogMode(true)

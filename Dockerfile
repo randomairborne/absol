@@ -14,6 +14,9 @@ RUN go build -o absol -v github.com/randomairborne/absol/core
 FROM alpine
 
 COPY --from=builder /build/absol /go/bin/absol
-ENV DISCORD_TOKEN="ODI4MzE1NjQxMTY0MzMzMDg3.YGnzDg._lGdkshVZU9madNhHvu4Ge1XxnQ"
+
+ENV DISCORD_TOKEN="ODQzNTcwOTI4OTg2MDk1NjY3.YKFypg.oitHaYth01yypXcxb4SA9mgMsoM"
+ENV DATABASE="absol:Password@/absol"
+
 ENTRYPOINT ["/go/bin/absol"]
-CMD ["alert", "cleaner", "factoids", "log", "twitch", "hjt"]
+CMD ["alert", "factoids", "hjt"]

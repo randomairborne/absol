@@ -31,7 +31,6 @@ func GetChannel(ds *discordgo.Session, channelId string) *discordgo.Channel {
 		c, err = ds.Channel(channelId)
 		if err != nil {
 			logger.Err().Printf("unable to fetch Channel for Message, %s", err)
-			return nil
 		} else {
 			// Attempt to add this channel into our State
 			err = ds.State.ChannelAdd(c)
